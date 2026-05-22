@@ -17,11 +17,20 @@ def insertion_sort(arr: np.ndarray) -> np.ndarray:
 
 
 def selection_sort(arr: np.ndarray) -> np.ndarray:
-	# your implementation goes here	
-
+	n = len(arr)
+	for i in range(n):
+		# Index des Minimums im unsortierten Teilarray suchen
+		min_idx = i
+		for j in range(i + 1, n):
+			if arr[j] < arr[min_idx]:
+				min_idx = j
+ 
+		# Minimum mit dem ersten unsortierten Element tauschen
+		arr[i], arr[min_idx] = arr[min_idx], arr[i]
+ 
 	return arr
-
-
+ 
+ 
 def _merge_sort_helper(arr: np.ndarray) -> np.ndarray:
 	# your implementation goes here
 	# you may want to look up the operator // as in 
@@ -58,8 +67,8 @@ def run_basic_verification_tests() -> None:
 		[7],
 	]
 
-	sort_fns = [insertion_sort, selection_sort, merge_sort, quick_sort]
-
+	sort_fns = [insertion_sort, selection_sort,]
+# merge_sort, quick_sort
 	for sort_fn in sort_fns:
 		for test in tests:
 			arr = np.array(test)
@@ -74,12 +83,12 @@ def run_basic_verification_tests() -> None:
 
 if __name__ == "__main__":
 	# turn on basic verification tests once you expect them to pass 
-	# run_basic_verification_tests()
+	run_basic_verification_tests()
 
 	rng = np.random.default_rng(42)
 	lengths = [10, 100, 1000, 10000, 50000, 200000]
 	quadratic_max_length = 10000
-	sort_fns = [insertion_sort, selection_sort, merge_sort, quick_sort]
+	sort_fns = [insertion_sort, selection_sort]
 
 	for length in lengths:
 		increasing = np.arange(length)
