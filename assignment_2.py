@@ -19,13 +19,13 @@ def insertion_sort(arr: np.ndarray) -> np.ndarray:
 def selection_sort(arr: np.ndarray) -> np.ndarray:
 	n = len(arr)
 	for i in range(n):
-		# Index des Minimums im unsortierten Teilarray suchen
+		# search for the index of the minimum in the unsorted part of the array
 		min_idx = i
 		for j in range(i + 1, n):
 			if arr[j] < arr[min_idx]:
 				min_idx = j
  
-		# Minimum mit dem ersten unsortierten Element tauschen
+		# switch minimum with the first unsorted element
 		arr[i], arr[min_idx] = arr[min_idx], arr[i]
  
 	return arr
