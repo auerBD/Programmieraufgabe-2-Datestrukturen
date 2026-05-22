@@ -3,16 +3,20 @@ import sys
 import time
 
 def insertion_sort(arr: np.ndarray) -> np.ndarray:
+	# outer loop: starts at index 1, since a single element is always sorted
 	for i in range(1, len(arr)):
-		key = arr[i]
-		j = i - 1
-
+		key = arr[i]  # pick up the current element to be inserted at the right position
+		j = i - 1     # j points to the last element of the already sorted portion
+ 
+		# inner loop: as long as there are larger elements to the left,
+		# shift them one position to the right to make room
 		while j >= 0 and arr[j] > key:
-			arr[j + 1] = arr[j]
-			j -= 1
-
+			arr[j + 1] = arr[j]  # shift element one position to the right
+			j -= 1               # move one step further to the left
+ 
+		# gap found: insert key at the correct position
 		arr[j + 1] = key
-
+ 
 	return arr
 
 
@@ -67,8 +71,7 @@ def run_basic_verification_tests() -> None:
 		[7],
 	]
 
-	sort_fns = [insertion_sort, selection_sort,]
-# merge_sort, quick_sort
+	sort_fns = [insertion_sort, selection_sort, merge_sort, quick_sort]
 	for sort_fn in sort_fns:
 		for test in tests:
 			arr = np.array(test)
@@ -83,12 +86,12 @@ def run_basic_verification_tests() -> None:
 
 if __name__ == "__main__":
 	# turn on basic verification tests once you expect them to pass 
-	run_basic_verification_tests()
+	#run_basic_verification_tests() # <---- uncomment this to start the tests
 
 	rng = np.random.default_rng(42)
 	lengths = [10, 100, 1000, 10000, 50000, 200000]
 	quadratic_max_length = 10000
-	sort_fns = [insertion_sort, selection_sort]
+	sort_fns = [insertion_sort, selection_sort, merge_sort, quick_sort]
 
 	for length in lengths:
 		increasing = np.arange(length)

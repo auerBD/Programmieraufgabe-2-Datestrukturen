@@ -39,15 +39,7 @@ Implementierung und Laufzeitanalyse von vier Sortieralgorithmen in Python:
 
 ### Installation
 
-```bash
-# Virtuelle Umgebung erstellen (empfohlen)
-python -m venv .venv
-
-# Aktivieren – macOS/Linux:
-source .venv/bin/activate
-
-# Aktivieren – Windows:
-.venv\Scripts\activate
+# Python installieren
 
 # Abhängigkeiten installieren
 pip install numpy
