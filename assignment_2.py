@@ -39,13 +39,30 @@ def selection_sort(arr: np.ndarray) -> np.ndarray:
  
  
 def _merge_sort_helper(arr: np.ndarray) -> np.ndarray:
-	# your implementation goes here
-	# you may want to look up the operator // as in 
-	# mid = len(arr) // 2
+# Base case: a list with 0 or 1 element is already sorted
+  if len(arr) <= 1:
+      return arr.copy()
 
-	result = np.empty(len(arr), dtype=arr.dtype)
-	# ...
-	return result
+  # Split into two halves and sort each recursively
+  mid = len(arr) // 2
+  left = _merge_sort_helper(arr[:mid])
+  right = _merge_sort_helper(arr[mid:])
+
+  # Merge the two sorted halves
+  result = np.empty(len(arr), dtype=arr.dtype)
+  i = j = k = 0
+  while i < len(left) and j < len(right):
+      if left[i] <= right[j]:
+          result[k] = left[i]; i += 1
+      else:
+          result[k] = right[j]; j += 1
+      k += 1
+
+  # Copy remaining elements
+  result[k:k+len(left)-i] = left[i:]
+  result[k+len(left)-i:] = right[j:]
+
+  return result
 
 
 def merge_sort(arr: np.ndarray) -> np.ndarray:

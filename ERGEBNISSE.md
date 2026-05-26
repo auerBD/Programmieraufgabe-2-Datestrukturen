@@ -1,4 +1,4 @@
-# Laufzeitmessungen – Programmieraufgabe 2
+  # Laufzeitmessungen – Programmieraufgabe 2
 
 Dieses Dokument dient zur gemeinsamen Erfassung und Auswertung der gemessenen Laufzeiten.  
 Bitte nach dem Ausführen von `assignment_2.py` die Tabellen ausfüllen.
@@ -48,18 +48,18 @@ Bitte nach dem Ausführen von `assignment_2.py` die Tabellen ausfüllen.
 
 ### Merge Sort
 
-| n       | aufsteigend (s) | absteigend (s) | zufällig (s) |
+| n       | aufsteigend (s)| absteigend (s) | zufällig (s) |
 |---------|----------------|----------------|--------------|
-| 10      |                |                |              |
-| 100     |                |                |              |
-| 1.000   |                |                |              |
-| 10.000  |                |                |              |
-| 50.000  |                |                |              |
-| 200.000 |                |                |              |
+| 10      |    0.00003609  |    0.00003039  |   0.00002716 |
+| 100     |    0.00018372  |    0.00017532  |   0.00025545 |
+| 1.000   |    0.00208871  |    0.00208262  |   0.00289655 |
+| 10.000  |    0.02402099  |    0.02474465  |   0.03588332 |
+| 50.000  |    0.13172951  |    0.13477495  |   0.20409206 |
+| 200.000 |    0.57384267  |    0.59192972  |   0.93574748 |
 
 ### Quick Sort
 
-| n       | aufsteigend (s) | absteigend (s) | zufällig (s) |
+| n       | aufsteigend (s)| absteigend (s) | zufällig (s) |
 |---------|----------------|----------------|--------------|
 | 10      |      0.00003030|      0.00002690|    0.00001450|
 | 100     |      0.00024220|      0.00023860|    0.00023710|
@@ -83,14 +83,14 @@ Bitte nach dem Ausführen von `assignment_2.py` die Tabellen ausfüllen.
 > Ja
 
 **Merge Sort:**  
-> ...
+> Ja, kaum unterschiede zwischen aufsteigenden, absteigenden und zufälligen Zahlen.
 
 **Quick Sort:**  
 > Ja
 
 ### Auffälligkeiten
 
-> z. B. Unterschiede zwischen aufsteigender und zufälliger Eingabe, Verhalten bei großen n, ...
+> Merge-Sort verhält sich bei allen Eingabetypen sehr ähnlich.
 
 ---
 
@@ -101,3 +101,4 @@ Bitte nach dem Ausführen von `assignment_2.py` die Tabellen ausfüllen.
 |Bence |  Mac OS        |       3.13.5    |   22.05.2026|
 |Kevin |  Windows 11    |       3.13.6    |   26.05.2026|
 |      |                |                 |             |
+|Url   |  Fedora (RHEL) |       3.14.4    |  26.05.2026 |
