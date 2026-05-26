@@ -99,5 +99,5 @@ Bitte nach dem Ausführen von `assignment_2.py` die Tabellen ausfüllen.
 | Name | Betriebssystem | Python-Version  | Datum       |
 |------|----------------|-----------------|-------------|
 |Bence |  Mac OS        |       3.13.5    |  22.05.2026 |
-|Url   |  Fedora (RHEL) |       3.14.4    |  26.05.2026 |
 |      |                |                 |             |
+|Url   |  Fedora (RHEL) |       3.14.4    |  26.05.2026 |
