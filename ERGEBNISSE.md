@@ -61,12 +61,12 @@ Bitte nach dem Ausführen von `assignment_2.py` die Tabellen ausfüllen.
 
 | n       | aufsteigend (s) | absteigend (s) | zufällig (s) |
 |---------|----------------|----------------|--------------|
-| 10      |                |                |              |
-| 100     |                |                |              |
-| 1.000   |                |                |              |
-| 10.000  |                |                |              |
-| 50.000  |                |                |              |
-| 200.000 |                |                |              |
+| 10      |      0.00002290|      0.00001320|    0.00000820|
+| 100     |      0.00123250|      0.00079540|    0.00011970|
+| 1.000   |      0.11429810|      0.07447850|    0.00192110|
+| 10.000  |     22.90686810|     14.47039810|    0.02781510|
+| 50.000  |  -             |                |              |
+| 200.000 |  -             |                |              |
 
 ---
 
@@ -86,7 +86,7 @@ Bitte nach dem Ausführen von `assignment_2.py` die Tabellen ausfüllen.
 > ...
 
 **Quick Sort:**  
-> ...
+> Ja
 
 ### Auffälligkeiten
 
@@ -99,5 +99,5 @@ Bitte nach dem Ausführen von `assignment_2.py` die Tabellen ausfüllen.
 | Name | Betriebssystem | Python-Version  | Datum       |
 |------|----------------|-----------------|-------------|
 |Bence |  Mac OS        |       3.13.5    |   22.05.2026|
-|      |                |                 |             |
+|Kevin |  Windows 11    |       3.13.6    |   26.05.2026|
 |      |                |                 |             |
