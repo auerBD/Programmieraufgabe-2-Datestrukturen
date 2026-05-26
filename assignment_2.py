@@ -2,6 +2,9 @@ import numpy as np
 import sys
 import time
 
+
+sys.setrecursionlimit(500000)
+
 def insertion_sort(arr: np.ndarray) -> np.ndarray:
 	# outer loop: starts at index 1, since a single element is always sorted
 	for i in range(1, len(arr)):
@@ -68,7 +71,24 @@ def merge_sort(arr: np.ndarray) -> np.ndarray:
 
 
 def quick_sort(arr: np.ndarray) -> np.ndarray:
-	# your implementation goes here
+	def _quick_sort_helper(arr, low, high):
+		if low < high:
+			pivot_idx = partition(arr, low, high)
+			_quick_sort_helper(arr, low, pivot_idx - 1)
+			_quick_sort_helper(arr, pivot_idx + 1, high)
+
+	def partition(arr, low, high):
+		pivot = arr[high]
+		i = low - 1
+		for j in range(low, high):
+			if arr[j] <= pivot:
+				i += 1
+				arr[i], arr[j] = arr[j], arr[i]
+		arr[i + 1], arr[high] = arr[high], arr[i + 1]
+		return i + 1
+
+	if len(arr) > 1:
+		_quick_sort_helper(arr, 0, len(arr) - 1)
 	return arr
 
 
@@ -118,7 +138,7 @@ if __name__ == "__main__":
 
 		print(f"length={length}")
 		for sort_fn in sort_fns:
-			if sort_fn in (insertion_sort, selection_sort) and length > quadratic_max_length:
+			if sort_fn in (insertion_sort, selection_sort) and length >= quadratic_max_length:
 				continue
 			for name, base_arr in [("increasing", increasing), ("decreasing", decreasing), ("random", random)]:
 				arr = base_arr.copy()

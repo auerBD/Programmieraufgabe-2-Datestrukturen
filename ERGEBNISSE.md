@@ -61,12 +61,12 @@ Bitte nach dem Ausführen von `assignment_2.py` die Tabellen ausfüllen.
 
 | n       | aufsteigend (s)| absteigend (s) | zufällig (s) |
 |---------|----------------|----------------|--------------|
-| 10      |                |                |              |
-| 100     |                |                |              |
-| 1.000   |                |                |              |
-| 10.000  |                |                |              |
-| 50.000  |                |                |              |
-| 200.000 |                |                |              |
+| 10      |      0.00003030|      0.00002690|    0.00001450|
+| 100     |      0.00024220|      0.00023860|    0.00023710|
+| 1.000   |      0.00274650|      0.00333680|    0.00285370|
+| 10.000  |      0.03812900|      0.03828250|    0.03675230|
+| 50.000  |      0.21918250|      0.20951400|    0.21699540|
+| 200.000 |      1.03181070|      1.02849080|    0.96816170|
 
 ---
 
@@ -86,7 +86,7 @@ Bitte nach dem Ausführen von `assignment_2.py` die Tabellen ausfüllen.
 > Ja, kaum unterschiede zwischen aufsteigenden, absteigenden und zufälligen Zahlen.
 
 **Quick Sort:**  
-> ...
+> Ja
 
 ### Auffälligkeiten
 
@@ -98,6 +98,7 @@ Bitte nach dem Ausführen von `assignment_2.py` die Tabellen ausfüllen.
 
 | Name | Betriebssystem | Python-Version  | Datum       |
 |------|----------------|-----------------|-------------|
-|Bence |  Mac OS        |       3.13.5    |  22.05.2026 |
+|Bence |  Mac OS        |       3.13.5    |   22.05.2026|
+|Kevin |  Windows 11    |       3.13.6    |   26.05.2026|
 |      |                |                 |             |
 |Url   |  Fedora (RHEL) |       3.14.4    |  26.05.2026 |
