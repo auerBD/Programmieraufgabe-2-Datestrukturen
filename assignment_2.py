@@ -2,6 +2,7 @@ import numpy as np
 import sys
 import time
 
+
 sys.setrecursionlimit(500000)
 
 def insertion_sort(arr: np.ndarray) -> np.ndarray:
